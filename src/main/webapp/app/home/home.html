@@ -37,6 +37,26 @@
             </div>
 
 
+            <div class="row" ng-repeat="solarprojects in vm.solarprojects">
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <img src="{{solarprojects.imageurl}}" alt="...">
+                        <div class="caption">
+                            <h2>{{solarprojects.productname}}</h2>
+                            <h3>Type:{{solarprojects.productType}}</h3>
+                            <h4>Size:{{solarprojects.size}} KW</h4>
+                            <h5>Cost: {{solarprojects.cost}}</h5>
+                            <p>Risk Score :{{solarprojects.riskscore}}</p>
+                            <p>ROI : {{solarprojects.returnOnInvestment}} % </p>
+
+                            <p><a href="#/funds" class="btn btn-primary" role="button">Fund this project</a > </p>
+                            <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to Compare Investment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>

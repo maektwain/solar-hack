@@ -36,8 +36,19 @@ public class Solarprojects implements Serializable {
     @Column(name = "emission")
     private Long emission;
 
-    @Column(name = "returnOnInvestment")
+    @Column(name = "return_investment")
     private Long returnOnInvestment;
+
+    @Column(name = "image_url")
+    private String imageurl;
+
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
+    }
 
     @ManyToOne
     @JoinColumn(name = "vendor_id")

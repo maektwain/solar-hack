@@ -5,10 +5,23 @@
         .module('solarhackApp')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$scope', 'Principal', 'LoginService', '$state'];
+    HomeController.$inject = ['$scope', 'Principal', 'LoginService', 'Solarprojects','$state' , 'AlertService'];
 
-    function HomeController ($scope, Principal, LoginService, $state) {
+    function HomeController ($scope, Principal, LoginService,Solarprojects, $state, AlertService ) {
         var vm = this;
+
+        Solarprojects.query({
+
+                    }, onSuccess, onError);
+
+        function onSuccess(data, headers) {
+
+                        vm.solarprojects = data;
+
+                    }
+                    function onError(error) {
+                        AlertService.error(error.data.message);
+                    }
 
         vm.account = null;
         vm.isAuthenticated = null;
