@@ -27,7 +27,7 @@ spring:
         url: jdbc:mysql://192.168.99.100:4900/solarhack?useUnicode=true&characterEncoding=utf8&useSSL=false
         name:
         username: root
-        password:
+        password: mysql
         hikari:
             data-source-properties:
                 cachePrepStmts: true
