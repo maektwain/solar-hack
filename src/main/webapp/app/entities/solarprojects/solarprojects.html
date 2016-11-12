@@ -1,0 +1,70 @@
+<div>
+    <h2 data-translate="solarhackApp.solarprojects.home.title">Solarprojects</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="solarprojects.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="solarhackApp.solarprojects.home.createLabel">
+                        Create new Solarprojects
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="productname"><span data-translate="solarhackApp.solarprojects.productname">Productname</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="productType"><span data-translate="solarhackApp.solarprojects.productType">Product Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="size"><span data-translate="solarhackApp.solarprojects.size">Size</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cost"><span data-translate="solarhackApp.solarprojects.cost">Cost</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="riskscore"><span data-translate="solarhackApp.solarprojects.riskscore">Riskscore</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="vendor_id"><span data-translate="solarhackApp.solarprojects.vendor_id">Vendor Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="solarprojects in vm.solarprojects track by solarprojects.id">
+                    <td><a ui-sref="solarprojects-detail({id:solarprojects.id})">{{solarprojects.id}}</a></td>
+                    <td>{{solarprojects.productname}}</td>
+                    <td>{{solarprojects.productType}}</td>
+                    <td>{{solarprojects.size}}</td>
+                    <td>{{solarprojects.cost}}</td>
+                    <td>{{solarprojects.riskscore}}</td>
+                    <td>{{solarprojects.vendor_id}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="solarprojects-detail({id:solarprojects.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="solarprojects.edit({id:solarprojects.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="solarprojects.delete({id:solarprojects.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

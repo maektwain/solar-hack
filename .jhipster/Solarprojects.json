@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "productname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "size",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "cost",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "riskscore",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "vendor_id",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20161112085956",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "solarprojects",
+    "pagination": "pager"
+}

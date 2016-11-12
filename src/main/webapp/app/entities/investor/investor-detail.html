@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="solarhackApp.investor.detail.title">Investor</span> {{vm.investor.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="solarhackApp.investor.amount">Amount</span></dt>
+        <dd>
+            <span>{{vm.investor.amount}}</span>
+        </dd>
+        <dt><span data-translate="solarhackApp.investor.tenure">Tenure</span></dt>
+        <dd>
+            <span>{{vm.investor.tenure}}</span>
+        </dd>
+        <dt><span data-translate="solarhackApp.investor.user">User</span></dt>
+        <dd>
+            {{vm.investor.user.first_name}}
+        </dd>
+        <dt><span data-translate="solarhackApp.investor.solarprojects">Solarprojects</span></dt>
+        <dd>
+            <a ui-sref="solarprojects-detail({id:vm.investor.solarprojects.id})">{{vm.investor.solarprojects.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="investor-detail.edit({id:vm.investor.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

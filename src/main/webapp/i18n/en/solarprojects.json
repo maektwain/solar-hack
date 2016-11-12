@@ -1,0 +1,27 @@
+{
+    "solarhackApp": {
+        "solarprojects" : {
+            "home": {
+                "title": "Solarprojects",
+                "createLabel": "Create a new Solarprojects",
+                "createOrEditLabel": "Create or edit a Solarprojects",
+                "search": "Search for Solarprojects"
+            },
+            "created": "A new Solarprojects is created with identifier {{ param }}",
+            "updated": "A Solarprojects is updated with identifier {{ param }}",
+            "deleted": "A Solarprojects is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Solarprojects {{ id }}?"
+            },
+            "detail": {
+                "title": "Solarprojects"
+            },
+            "productname": "Productname",
+            "productType": "Product Type",
+            "size": "Size",
+            "cost": "Cost",
+            "riskscore": "Riskscore",
+            "vendor_id": "Vendor Id"
+        }
+    }
+}

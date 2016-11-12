@@ -1,0 +1,25 @@
+{
+    "solarhackApp": {
+        "investor" : {
+            "home": {
+                "title": "Investors",
+                "createLabel": "Create a new Investor",
+                "createOrEditLabel": "Create or edit a Investor",
+                "search": "Search for Investor"
+            },
+            "created": "A new Investor is created with identifier {{ param }}",
+            "updated": "A Investor is updated with identifier {{ param }}",
+            "deleted": "A Investor is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Investor {{ id }}?"
+            },
+            "detail": {
+                "title": "Investor"
+            },
+            "amount": "Amount",
+            "tenure": "Tenure",
+            "user": "User",
+            "solarprojects": "Solarprojects"
+        }
+    }
+}

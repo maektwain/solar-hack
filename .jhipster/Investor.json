@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "first_name",
+            "ownerSide": true
+        },
+        {
+            "relationshipName": "solarprojects",
+            "otherEntityName": "solarprojects",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "amount",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "tenure",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20161112093615",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "investor",
+    "pagination": "pager"
+}

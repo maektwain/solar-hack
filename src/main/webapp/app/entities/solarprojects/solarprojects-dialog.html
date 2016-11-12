@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="mySolarprojectsLabel" data-translate="solarhackApp.solarprojects.home.createOrEditLabel">Create or edit a Solarprojects</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.solarprojects.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.solarprojects.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="solarhackApp.solarprojects.productname" for="field_productname">Productname</label>
+            <input type="text" class="form-control" name="productname" id="field_productname"
+                    ng-model="vm.solarprojects.productname"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="solarhackApp.solarprojects.productType" for="field_productType">Product Type</label>
+            <input type="text" class="form-control" name="productType" id="field_productType"
+                    ng-model="vm.solarprojects.productType"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="solarhackApp.solarprojects.size" for="field_size">Size</label>
+            <input type="number" class="form-control" name="size" id="field_size"
+                    ng-model="vm.solarprojects.size"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="solarhackApp.solarprojects.cost" for="field_cost">Cost</label>
+            <input type="number" class="form-control" name="cost" id="field_cost"
+                    ng-model="vm.solarprojects.cost"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="solarhackApp.solarprojects.riskscore" for="field_riskscore">Riskscore</label>
+            <input type="number" class="form-control" name="riskscore" id="field_riskscore"
+                    ng-model="vm.solarprojects.riskscore"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="solarhackApp.solarprojects.vendor_id" for="field_vendor_id">Vendor Id</label>
+            <input type="number" class="form-control" name="vendor_id" id="field_vendor_id"
+                    ng-model="vm.solarprojects.vendor_id"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
